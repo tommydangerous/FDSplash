@@ -1,0 +1,353 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	overflow: hidden;
+}
+
+.container {
+	position: absolute; 
+	top: 0; 
+	bottom: 0; 
+	left: 0; 
+	right: 0;
+	margin: auto; 
+	height: 400px; 
+	width: 760px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	z-index: 149;
+}
+
+fullBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+ 
+#maincontent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 150;
+}
+
+img#day {
+	position: absolute;
+	z-index: 101;
+}
+
+img#waves1 {
+	position: absolute;
+	top: 600px;
+	z-index: 128;
+}
+
+img#waves2 {
+	position: absolute;
+	top: 606px;
+	z-index: 129;
+}
+
+img#waves3 {
+	position: absolute;
+	top: 614px;
+	z-index: 130;
+}
+
+img#night {
+	position: absolute;
+	z-index: 100;
+}
+
+img#sun {
+	z-index: 150;
+	position: relative;
+	right: 26px;
+	bottom: 28px;
+	width: 480px;
+	height: 300px;
+	opacity: .4;
+}
+
+div.sun {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 500px;
+	margin: auto;
+	width: 430px;
+	height: 250px;
+	z-index: 110;
+}
+
+div#sun {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 110;
+	background: url(/assets/sun.png);
+	opacity: 1;
+}
+
+img#moon {
+	z-index: 150;
+	position: relative;
+	right: 16px;
+	bottom: 16px;
+	width: 460px;
+	height: 280px;
+	opacity: .25;
+}
+
+div.moon {
+	position: absolute;
+	top: 0;
+	left: 500px;
+	right: 0;
+	margin: auto;
+	width: 430px;
+	height: 250px;
+	z-index: 110;
+}
+
+div#moon {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 110;
+	background: url(/assets/moon.png);
+}
+
+div.airplane {
+	position: absolute;
+	left: -200px;
+	top: 40px;
+	z-index: 143;
+	width: 194px;
+	height: 146px;
+}
+
+div#airplane {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 143;
+	background: url(/assets/airplane7.png);
+}
+
+/*** Clouds ***/
+div#cloud1a {
+	position: absolute;
+	z-index: 144;
+	right: -150px;
+	top: 115px;
+}
+
+div#cloud2a {
+	position: absolute;
+	z-index: 142;
+	right: -250px;
+	top: 65px;
+}
+
+div#cloud3a {
+	position: absolute;
+	z-index: 141;
+	right: -100px;
+	top: 25px;
+}
+
+div#cloud1b {
+	position: absolute;
+	z-index: 144;
+	right: -150px;
+	top: 115px;
+}
+
+div#cloud2b {
+	position: absolute;
+	z-index: 142;
+	right: -250px;
+	top: 65px;
+}
+
+div#cloud3b {
+	position: absolute;
+	z-index: 141;
+	right: -100px;
+	top: 25px;
+}
+
+.clouds-single { 
+	width: 650px; 
+	height: 203px;
+	top: 0;
+	left: 75px; 
+	overflow:hidden;
+	position: absolute;
+}
+
+#clouds-single {
+	z-index: 122; 
+	float: right; 
+	position: absolute; 
+	width: 100%; 
+	height: 100%; 
+	background: url(/assets/clouds-single.png);
+	opacity: 0;
+}
+
+.clouds-single-small { 
+	width: 185px; 
+	height: 175px;
+	top: 25px;
+	right: 275px; 
+	overflow:hidden;
+	position: absolute;
+}
+
+#clouds-single-small {
+	z-index: 122; 
+	float: right; 
+	position: absolute; 
+	width: 100%; 
+	height: 100%; 
+	background: url(/assets/clouds-single-small.png);
+	opacity: 0;
+}
+
+.clouds-single-small2 { 
+	width: 185px; 
+	height: 175px;
+	top: -60px;
+	right: 0;
+	left: 0;
+	margin: auto; 
+	overflow:hidden;
+	position: absolute;
+}
+
+#clouds-single-small2 {
+	z-index: 122; 
+	float: right; 
+	position: absolute; 
+	width: 100%; 
+	height: 100%; 
+	background: url(/assets/clouds-single-small.png);
+	opacity: 0;
+}
+
+.clouds { 
+	width:100%; 
+	height:262px; 
+	overflow:hidden;
+	position: absolute;
+}
+
+#cloudsB {
+	width: 8000px;
+	left: 0px;
+}
+
+#clouds-big {
+	z-index: 140; 
+	float: right; 
+	position: absolute; 
+	width: 8000px; 
+	height: 100%; 
+	background: url(/assets/bg-clouds-big.png) repeat-x;
+	opacity: .85;
+	display: none;
+}
+
+#cloudsS {
+	width: 8000px;
+	left: 0px;
+}
+
+#clouds-small {
+	z-index: 111; 
+	position: absolute; 
+	width: 8000px; 
+	height: 100%; 
+	background:url(/assets/bg-clouds-small.png) repeat-x;
+	opacity: .65;
+}
+
+.stars {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	position: absolute;
+}
+#stars {
+	z-index: 109;
+	position: absolute;
+	width: 3000px;
+	height: 100%;
+	background: url(/assets/stars.png) repeat-x;
+	opacity: 0;
+}
+
+/* lightning */
+.lightning {
+	width: 300px;
+	height: 400px;
+	top: 0px;
+	left: 75px;
+	overflow: hidden;
+	position: absolute;
+}
+
+#lightning {
+	z-index: 121;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(/assets/lightning2a.png);
+	opacity: 0;
+}
+
+.lightning2 {
+	width: 150px;
+	height: 200px;
+	top: 25px;
+	right: 75px;
+	overflow: hidden;
+	position: absolute;
+}
+
+#lightning2 {
+	z-index: 121;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(/assets/lightning3a.png);
+	opacity: 0;
+}
+
+.lightning3 {
+	width: 200px;
+	height: 300px;
+	top: 0px;
+	right: 0;
+	left: 0;
+	margin: auto;
+	overflow: hidden;
+	position: absolute;
+}
+
+#lightning3 {
+	z-index: 121;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(/assets/lightning4a.png);
+	opacity: 0;
+}

@@ -1,0 +1,35 @@
+<section>
+	<header>
+		<%= logo %>
+	</header>
+	
+	<article id="main">
+		<h2>Want to be the <span class="green">first to know</span>?</h2>
+		<p class="first">Sign up and you won't be left out!</p>
+		
+		<div id="failure">
+			<p>please enter your email address</p>
+		</div>
+		<div id="error_count" style="display: block;">
+			<%= @error_count %>
+		</div>
+	
+	<%= form_for(@user, :remote => true) do |f| %>
+		<p id="form">You are known as &nbsp;
+			<%= f.text_field :name, :tabindex => 1, :class => "not_selected", :autocomplete => "off" %>
+			&nbsp;, and your email is &nbsp;
+			<%= f.text_field :email, :tabindex => 2, :class => "not_selected", :autocomplete => "off", :onclick => "hideFailure();", :onfocus => "hideFailure()" %>
+			&nbsp;.
+		</p>
+		<div class="actions" id="form_button">
+			<%= f.submit "Let me be the FIRST to know!", :id => "submit", :tabindex => 3 %>
+		</div>
+	<% end %>
+	</article>
+	
+	<div id="success">
+	</div>
+	
+</section>
+
+<%= render 'time' %>

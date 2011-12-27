@@ -1,0 +1,10 @@
+<% if @user.save %>
+	$("article#main").fadeOut(500, function() { $("div#success").slideDown(500); });
+	<% if @user.name.empty? %>
+		$("div#success").html("<h1>Welcome <span class='name'>Secret Agent</span>!</h1><h3>We will be fully launched in a flash. See you soon!</h3><h3>Thank you for your interest. We will keep you updated.</h3>");
+	<% else %>
+		$("div#success").html("<h1>Welcome <span class='name'><%= escape_javascript(@user.name) %></span>!</h1><h3>We will be fully launched in a flash. See you soon!</h3><h3>Thank you for your interest. We will keep you updated.</h3");
+	<% end %>
+<% else %>
+	$("div#failure").fadeIn(100);
+<% end %>
