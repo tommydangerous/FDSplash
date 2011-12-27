@@ -175,6 +175,9 @@ div#failure {
 	top: 195px;
 	left: 490px;
 	background: rgba(255, 0, 0, .5);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
 	border-radius: 5px;
 	padding: 3px 10px;
 }
