@@ -1,4 +1,4 @@
-<% if @time < Time.parse("6:00 PM") && @time > Time.parse("6:00 AM") %>
+<% if @time < Time.parse("6:00 PM") && @time >= Time.parse("6:00 AM") %>
 	<%= render 'day' %>
 <% else %>
 	<%= render 'night' %>

@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(params[:user])
   	if @user.save
-#  		UserMailer.registration_confirmation(@user).deliver unless Rails.env.development?
   		respond_to do |format|
   			format.html { redirect_to root_path }
   			format.js
