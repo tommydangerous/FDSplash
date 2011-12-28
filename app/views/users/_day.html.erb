@@ -1,15 +1,9 @@
-<style>
-  div.moon {display: none}
-  #clouds-big {opacity: 0;}
+<% content_for :stylesheets do %>
   #clouds-small {opacity: 1;}
-  div#moving_waves {display: none;}
-  div#waves {display: none;}
   div.mountain2 {left: 325px;}
-</style>
-
+<% end %>
 <script type="text/javascript">
   fadeOutSun();
-  
   cloud1a();
 	cloud2a();
 	cloud3a();
@@ -17,11 +11,8 @@
 	cloud2b();
 	cloud3b();
 	airplane();
-	
 	moveWavesS();
-	
 	moveCloudsS3();
-	
 	moveMountain1();
 	moveMountain2();
 </script>

@@ -1,22 +1,13 @@
-<style>
-  div.sun {display: none;}
-  img#day {display: none;}
+<% content_for :stylesheets do %>
   div#stars {opacity: 1;}
-  div#moving_waves1 {display: none;}
   div.mountain2 {right: 0;}
-</style>
-
+<% end %>
 <script>
 	fadeStarsF();
 	fadeOutMoon();
-	
 	flashLightning();
 	flashLightning2();
 	flashLightning3();
-	
 	moveWavesL();
-
-	
-	moveCloudsB3();
-
+	moveCloudsS3();
 </script>

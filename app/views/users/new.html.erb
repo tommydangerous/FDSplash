@@ -2,7 +2,7 @@
 	<header>
 		<%= logo %>
 	</header>
-	
+
 	<article id="main">
 		<h2>Want to be the <span class="green">first to know</span>?</h2>
 		<p class="first">Sign up and you won't be left out!</p>
@@ -33,3 +33,9 @@
 </section>
 
 <%= render 'time' %>
+
+<script>
+$(document).ready(function() {
+	$('img#logo').effect("bounce", { times: 3 }, 300);
+});
+</script>

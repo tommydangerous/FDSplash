@@ -166,7 +166,7 @@ function hideFailure() {
 };
 
 function moveWavesL() {
-	$("div#waves").animate({ left: "+=1000" }, 10000, "linear").animate({ left: "-=1000" }, 0, moveWavesL);
+	$("div#waves").animate({ left: "+=1000" }, 20000, "linear").animate({ left: "-=1000" }, 0, moveWavesL);
 };
 
 function moveWavesS() {
@@ -198,7 +198,7 @@ function moveCloudsS2() {
 };
 
 function moveCloudsS3() {
-	$("#clouds-small").animate({ left: "-=602" }, 7000, "linear").animate({ left: "+=602" }, 0, moveCloudsS3);
+	$("#clouds-small").animate({ left: "-=602" }, 15000, "linear").animate({ left: "+=602" }, 0, moveCloudsS3);
 };
 
 function moveCloudsB3() {

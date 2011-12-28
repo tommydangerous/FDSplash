@@ -1,7 +1,7 @@
 module PagesHelper
 	
 	def logo
-		image_tag("fd_logo.png")
+		image_tag("fd_logo.png", :id => "logo")
 	end
 	
 	def title

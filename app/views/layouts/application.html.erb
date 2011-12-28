@@ -6,9 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
-  <style>
-  	<%= yield :stylesheets %>
-  </style>
+  <style><%= yield :stylesheets %></style>
   <script type="text/javascript">
 	$(window).load(function() {
 		$(".background").fullBg();
@@ -19,65 +17,63 @@
 	<div class="clouds" id="cloudsS">
   	<div id="clouds-small"></div>
   </div>
-  <div class="clouds" id="cloudsB">
-  	<div id="clouds-big"></div>
-  </div>
-  <div class="stars">
-  	<div id="stars"></div>
-  </div>
-  <div class="lightning">
-  	<div id="lightning"></div>
-  </div>
-  <div class="lightning2">
-  	<div id="lightning2"></div>
-  </div>
-  <div class="lightning3">
-  	<div id="lightning3"></div>
-  </div>
-  <div class="clouds-single">
-  	<div id="clouds-single"></div>
-  </div>
-  <div class="clouds-single-small">
-  	<div id="clouds-single-small"></div>
-  </div>
-  <div class="clouds-single-small2">
-  	<div id="clouds-single-small2"></div>
-  </div>
-  <div class="sun">
-  	<div id="sun"></div>
-  	<img src="/assets/sun.png" id="sun">
-  </div>
-  <div class="moon">
-  	<div id="moon"></div>
-  	<img src="/assets/moon2.png" id="moon">
-  </div>
-  <div class="airplane">
-  	<div id="airplane"></div>
-  </div>
-  <div class="cloud1" id="cloud1a">
-  	<img src="/assets/cloud1.png">
-  </div>
-  <div class="cloud2" id="cloud2a">
-  	<img src="/assets/cloud2.png">
-  </div>
-  <div class="cloud3" id="cloud3a">
-  	<img src="/assets/cloud3.png">
-  </div>
-  <div class="cloud1" id="cloud1b">
-  	<img src="/assets/cloud1.png">
-  </div>
-  <div class="cloud2" id="cloud2b">
-  	<img src="/assets/cloud2.png">
-  </div>
-  <div class="cloud3" id="cloud3b">
-  	<img src="/assets/cloud3.png">
-  </div>
-  <div class="waves" id="moving_waves">
-  	<div id="waves"></div>
-  </div>
-  <div class="waves1" id="moving_waves1">
-  	<div id="waves1"></div>
-  </div>
+  <% unless @time < Time.parse("6:00 PM") && @time >= Time.parse("6:00 AM") %>
+	  <div class="stars">
+	  	<div id="stars"></div>
+	  </div>
+	  <div class="lightning">
+	  	<div id="lightning"></div>
+	  </div>
+	  <div class="lightning2">
+	  	<div id="lightning2"></div>
+	  </div>
+	  <div class="lightning3">
+	  	<div id="lightning3"></div>
+	  </div>
+	<% end %>
+  <% if @time < Time.parse("6:00 PM") && @time >= Time.parse("6:00 AM") %>
+	  <div class="sun">
+	  	<div id="sun"></div>
+			<%= sun_img %>
+	  </div>
+	<% else %>
+	  <div class="moon">
+	  	<div id="moon"></div>
+	  	<%= moon_img %>
+	  </div>
+	<% end %>
+	<% if @time < Time.parse("6:00 PM") && @time >= Time.parse("6:00 AM") %>
+	  <div class="airplane">
+	  	<div id="airplane"></div>
+	  </div>
+	  <div class="cloud1" id="cloud1a">
+	  	<img src="/assets/cloud1.png">
+	  </div>
+	  <div class="cloud2" id="cloud2a">
+	  	<img src="/assets/cloud2.png">
+	  </div>
+	  <div class="cloud3" id="cloud3a">
+	  	<img src="/assets/cloud3.png">
+	  </div>
+	  <div class="cloud1" id="cloud1b">
+	  	<img src="/assets/cloud1.png">
+	  </div>
+	  <div class="cloud2" id="cloud2b">
+	  	<img src="/assets/cloud2.png">
+	  </div>
+	  <div class="cloud3" id="cloud3b">
+	  	<img src="/assets/cloud3.png">
+	  </div>
+  <% end %>
+  <% if @time < Time.parse("6:00 PM") && @time >= Time.parse("6:00 AM") %>
+	  <div class="waves1" id="moving_waves1">
+	  	<div id="waves1"></div>
+	  </div>
+	<% else %>
+	  <div class="waves" id="moving_waves">
+	  	<div id="waves"></div>
+	  </div>
+	<% end %>
   <div class="waves2">
   	<div id="waves2"></div>
   </div>
@@ -90,17 +86,12 @@
   <div class="mountain2">
   	<div id="mountain2"></div>
   </div>
-
-	<img src="/assets/day2.jpg" class="background" id="day">
-
-	<img src="/assets/night2.jpg" class="background" id="night">
-
+	<%= time %>
 	<div class="container" id="maincontent">
 		<% flash.each do |key, value| %>
   		<%= content_tag(:div, value, :class => "flash #{key}") %>
   	<% end %>
 		<%= yield %>
 	</div>
-
 </body>
 </html>
