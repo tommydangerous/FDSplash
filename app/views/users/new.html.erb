@@ -4,7 +4,11 @@
 	</header>
 
 	<article id="main">
-		<h2>Want to be the <span class="green">first to know</span>?</h2>
+		<div id="more_info">
+			<p class="first"><span class="white">Here at FlashingDeal, we let you be the <span class="green">first to know</span> about the best of the best deals the web has to offer!</span></p>
+			<p>We promise to not email you anything but your beta invite.</p>
+		</div>
+		<h2>Want to be the <%= link_to "first to know", "javascript: void(0)", :onmouseover => "showMoreInfo()", :onmouseout => "hideMoreInfo()", :onclick => "explodeLogo()" %> ?</h2>
 		<p class="first">Sign up and you won't be left out!</p>
 		
 		<div id="failure">
@@ -22,7 +26,7 @@
 			&nbsp;.
 		</p>
 		<div class="actions" id="form_button">
-			<%= f.submit "Let me be the FIRST to know!", :id => "submit", :tabindex => 3 %>
+			<%= f.submit "Send Me An Invite!", :id => "submit", :tabindex => 3 %>
 		</div>
 	<% end %>
 	</article>
@@ -36,6 +40,6 @@
 
 <script>
 $(document).ready(function() {
-	$('img#logo').effect("bounce", { times: 3 }, 300);
+	$('img#logo').effect("bounce", { times: 4 }, 300);
 });
 </script>

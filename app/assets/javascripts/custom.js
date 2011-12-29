@@ -212,3 +212,15 @@ function moveMountain1() {
 function moveMountain2() {
 	$("div.mountain2").css("left", "2825px").animate({ left: "-=3800" }, 30000, "linear", moveMountain2);
 };
+
+function showMoreInfo() {
+	$('div#more_info').fadeIn(300);
+};
+
+function hideMoreInfo() {
+	$('div#more_info').fadeOut(300);
+};
+
+function explodeLogo() {
+	$('img#logo').effect("pulsate", { times: 3 }, 60);
+};

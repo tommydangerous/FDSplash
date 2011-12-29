@@ -121,6 +121,7 @@ div#form_button {
 }
 
 input#submit {
+	margin-right: 25px;
 	background: none;
 	font-size: 18px;
 	font-family: Helvetica;
@@ -213,4 +214,36 @@ span.name {
 
 span.green {
 	color: rgba(101, 209, 84, 1);
+}
+
+article#main h2 a {
+	text-decoration: none;
+	color: rgba(101, 209, 84, 1);
+}
+
+div#more_info {
+	display: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	width: 320px;
+	padding: 15px;
+	position: absolute;
+	background: rgba(25, 25, 25, .9);
+}
+
+div#more_info p {
+	color: rgba(175, 175, 175, 1);
+	font-family: 'ComfortaaRegular', Verdana;
+	font-size: 18px;
+	margin: 0;
+}
+
+div#more_info p.first {
+	margin-bottom: 10px;
+}
+
+span.white {
+	color: rgba(255, 255, 255, 1);
 }
