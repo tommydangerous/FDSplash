@@ -4,18 +4,13 @@
 	</header>
 
 	<article id="main">
-		<div id="more_info">
-			<p class="first"><span class="white">Here at FlashingDeal, we let you be the <span class="green">first to know</span> about the best of the best deals the web has to offer!</span></p>
-			<p>We promise to not email you anything but your beta invite.</p>
-		</div>
-		<h2>Want to be the <%= link_to "first to know", "javascript: void(0)", :onmouseover => "showMoreInfo()", :onmouseout => "hideMoreInfo()", :onclick => "explodeLogo()" %> ?</h2>
-		<p class="first">Sign up and you won't be left out!</p>
+		<h2>Want to be the <%= link_to "first to know", "javascript: void(0)", :onclick => "explodeLogo()" %> ?</h2>
+		<p class="first"><span class="white">We let you be the <span class="green">first to know</span> about the best of the best deals the web has to offer!</span></p>
+		<p class="second">Sign up and you won't be left out! We promise to only email you about your beta invite.</p>
 		
 		<div id="failure">
 			<p>please enter your email address</p>
-		</div>
-		<div id="error_count" style="display: block;">
-			<%= @error_count %>
+			<div id="down_arrow"></div>
 		</div>
 	
 	<%= form_for(@user, :remote => true) do |f| %>
