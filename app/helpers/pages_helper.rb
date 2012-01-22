@@ -1,11 +1,11 @@
 module PagesHelper
 	
 	def logo
-		image_tag("fd_logo.png", :id => "logo")
+		image_tag("fds_logo.png", :id => "logo")
 	end
 	
 	def title
-		base_title = "FlashingDeal"
+		base_title = "FlashingDeals"
 		if @title.nil?
 			base_title
 		else

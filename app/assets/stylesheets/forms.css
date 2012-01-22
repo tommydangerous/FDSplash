@@ -17,19 +17,13 @@ section header {
 	text-align: center;
 	margin-top: -15px;
 	margin-bottom: 0px;
-	height: 110px;
-	width: 478px;
+	height: 105px;
+	width: 508px;
 	margin: auto;
 }
 
 img#logo {
-	width: 478px;
-	height: 105px;
-	margin: auto;
-}
-
-img.logo {
-	width: 478px;
+	width: 508px;
 	height: 105px;
 	margin: auto;
 }
